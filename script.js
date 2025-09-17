@@ -95,6 +95,8 @@ function removeBook() {
       bookToRemove.remove();
       // Update the book count
       count.textContent = myLibrary.length;
+      readBooks.textContent = calculateReadBooks();
+      notReadBooks.textContent = calculateNotReadBooks();
     });
   });
 }
