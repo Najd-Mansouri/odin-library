@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="left-side">
+      <div class="title">
+        <img src="./assets/book-regular-full.svg" alt="book-icon" width="35" />
+        <h1>MyBooks</h1>
+      </div>
+      <div class="controls">
+        <a href="#" id="add-book">Add Book</a>
+        <a href="#" id="reset-btn">Reset all</a>
+        <div class="total-display">
+          <div>
+            <span class="count">0</span>
+            Total Books
+          </div>
+          <div>
+            <span class="read-books">0</span>
+            Books Read
+          </div>
+          <div>
+            <span class="notread-books">0</span>
+            Books NOT read
+          </div>
+        </div>
+      </div>
+      <dialog id="book-dialog">
+        <a href="#" id="close-dialog">Close</a>
+        <form class="book-form">
+          <h3>Add Book</h3>
+          <div class="input-field">
+            <label for="title">Book Title</label>
+            <input type="text" name="title" id="title" autofocus required />
+          </div>
+          <div class="input-field">
+            <label for="author">Book Author</label>
+            <input type="text" name="author" id="author" required />
+          </div>
+          <div class="input-field">
+            <label for="pages">Page Count</label>
+            <input type="number" name="pages" id="pages" required />
+          </div>
+          <div>
+            <input type="checkbox" name="status" id="status" />
+            <label for="status">I swear to God I read this book</label>
+          </div>
+          <button id="submit-btn">Submit</button>
+        </form>
+      </dialog>
+    </div>
+
+    <div class="right-side">
+      <div class="book-list"></div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
